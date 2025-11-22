@@ -1,0 +1,106 @@
+﻿"use client";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
+import FallingFoodBackground from './FallingFoodBackground';
+
+export function FeaturedItems() {
+  const { t, language } = useLanguage();
+
+  const heading = language === 'en' 
+    ? { part1: 'Hungry?', part2: "We've Got You Covered!" }
+    : { part1: 'Éhes vagy?', part2: 'Mi megoldást adunk!' };
+
+  const subtitle = language === 'en'
+    ? "Authentic Turkish döner, crispy fries, and bold flavors waiting for you."
+    : "Autentikus török döner, ropogós sültkrumpli és merész ízek várnak rád.";
+
+  const subtitle2 = language === 'en'
+    ? "Check out what's cooking!"
+    : "Nézd meg mit főzünk!";
+
+  const buttonText = language === 'en'
+    ? "Menu"
+    : "Menü";
+
+  return (
+    <section className='py-32 relative overflow-hidden'>
+      <FallingFoodBackground />
+      <div className='luxury-container relative z-10'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className='font-serif text-5xl md:text-6xl mb-6 heading-glow'>
+              <span className='gold-text'>{heading.part1}</span> {heading.part2}
+            </h2>
+            <p className='text-xl md:text-2xl text-cream/80 mb-12 leading-relaxed'>
+              {subtitle} <br />
+              <span className='text-gold'>{subtitle2}</span>
+            </p>
+          </motion.div>
+
+          {/* Animated Pointing Fingers */}
+          <div className='flex flex-col items-center gap-8'>
+            {/* Pointing fingers above button */}
+            <div className='flex items-center justify-center gap-12'>
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                animate={{ 
+                  y: [0, 10, 0]
+                }}
+                // @ts-ignore
+                transition={{
+                  y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" }
+                }}
+                className='text-4xl pointer-events-none'
+              >
+                👇
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                animate={{ 
+                  y: [0, 10, 0]
+                }}
+                // @ts-ignore
+                transition={{
+                  y: { repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.3 }
+                }}
+                className='text-4xl pointer-events-none'
+              >
+                👇
+              </motion.div>
+            </div>
+
+            {/* Menu Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Link
+                href="/menu"
+                className='inline-block px-16 py-4 text-2xl font-bold bg-cream/80 text-scorched-orange border-2 border-scorched-orange rounded-lg shadow-lg hover:bg-scorched-orange hover:text-cream transition-all duration-300'
+              >
+                Menu / Menü
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+export default FeaturedItems;
