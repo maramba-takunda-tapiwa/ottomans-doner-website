@@ -20,6 +20,10 @@ export function FeaturedItems() {
     ? "Check out what's cooking!"
     : "Nézd meg mit főzünk!";
 
+  const buttonText = language === 'en'
+    ? "Menu"
+    : "Menü";
+
   return (
     <section className='py-32 relative overflow-hidden'>
       <FallingFoodBackground />
@@ -70,12 +74,12 @@ export function FeaturedItems() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Link
+              <a
                 href="/menu"
                 className='inline-block px-16 py-4 text-2xl font-bold bg-offWhite/80 text-scorchedOrange border-2 border-scorchedOrange rounded-lg shadow-lg hover:bg-scorchedOrange hover:text-offWhite transition-all duration-300'
               >
-                Menu / Menü
-              </Link>
+                {buttonText}
+              </a>
             </motion.div>
           </div>
         </div>
