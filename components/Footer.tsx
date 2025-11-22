@@ -6,7 +6,7 @@ export function Footer() {
       <div className="luxury-container py-10 grid gap-8 md:grid-cols-3 text-sm">
         <div>
           <h3 className="font-serif text-lg gold-text mb-3 heading-glow">Ottoman&apos;s Döner</h3>
-          <p className="text-luxuryGold/70 leading-relaxed">Debrecen's destination for premium Döner, artisanal fries & iconic curry wurst. Dark luxury meets classic Turkish heritage.</p>
+          <p className="text-luxuryGold/70 leading-relaxed">Debrecen&apos;s destination for premium Döner, artisanal fries & iconic curry wurst. Dark luxury meets classic Turkish heritage.</p>
         </div>
         <div>
           <h4 className="uppercase tracking-wider text-xs gold-text mb-3">Navigate</h4>

@@ -52,7 +52,7 @@ export default function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-xl md:text-2xl text-luxuryGold/80 leading-relaxed max-w-3xl mx-auto"
           >
-            Ottoman's Döner isn't just food—it's a celebration of Turkish culinary heritage wrapped in dark luxury aesthetics. We believe street food can be premium without losing its soul.
+            Ottoman&apos;s Döner isn&apos;t just food—it&apos;s a celebration of Turkish culinary heritage wrapped in dark luxury aesthetics. We believe street food can be premium without losing its soul.
           </motion.p>
         </Section>
       </ScrollReveal>

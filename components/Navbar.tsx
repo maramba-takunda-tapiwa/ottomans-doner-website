@@ -31,7 +31,7 @@ export function Navbar() {
             className="rounded-lg shadow-lg"
           />
           <div className="flex items-center gap-2">
-            <span className="gold-text">Ottoman's</span>
+            <span className="gold-text">Ottoman&apos;s</span>
             <span className="orange-text">Döner</span>
           </div>
         </Link>
