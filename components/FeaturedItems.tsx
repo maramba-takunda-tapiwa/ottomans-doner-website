@@ -53,11 +53,8 @@ export function FeaturedItems() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 animate={{ 
-                  y: [0, 10, 0]
-                }}
-                // @ts-ignore
-                transition={{
-                  y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" }
+                  y: [0, 10, 0],
+                  transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut" }
                 }}
                 className='text-4xl pointer-events-none'
               >
@@ -69,11 +66,8 @@ export function FeaturedItems() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 animate={{ 
-                  y: [0, 10, 0]
-                }}
-                // @ts-ignore
-                transition={{
-                  y: { repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.3 }
+                  y: [0, 10, 0],
+                  transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.3 }
                 }}
                 className='text-4xl pointer-events-none'
               >

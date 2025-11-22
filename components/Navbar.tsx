@@ -25,7 +25,7 @@ export function Navbar() {
         <Link href="/" className="font-serif text-2xl tracking-wide flex items-center gap-3">
           <Image 
             src="/images/Title.jpg" 
-            alt="Ottoman's Döner Logo" 
+            alt="Ottoman&apos;s Döner Logo" 
             width={60} 
             height={60} 
             className="rounded-lg shadow-lg"
