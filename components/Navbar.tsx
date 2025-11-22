@@ -47,7 +47,6 @@ export function Navbar() {
               >
                 <span>{t(item.labelKey)}</span>
                 <motion.span
-                  layoutId="nav-underline"
                   className="absolute -bottom-1 left-0 h-[2px] bg-scorchedOrange"
                   initial={false}
                   animate={{ width: active ? '100%' : 0 }}
