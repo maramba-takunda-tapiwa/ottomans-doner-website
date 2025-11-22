@@ -7,7 +7,9 @@ import RouteProgress from '../components/RouteProgress';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { CartProvider } from '../contexts/CartContext';
 import CartButton from '../components/CartButton';
-import { Playfair_Display, Inter } from 'next/font/google';const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+import { Playfair_Display, Inter } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
@@ -34,42 +36,42 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>      
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-sans bg-luxuryBlack text-offWhite selection:bg-scorchedOrange/40">
-          <LanguageProvider>
+        <LanguageProvider>
           <CartProvider>
-          <RouteProgress />
-          {/* Restaurant structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Restaurant',
-              name: "Ottoman's Döner, Fries & Curry Wurst",
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Péterfia u. 2',
-                addressLocality: 'Debrecen',
-                postalCode: '4026',
-                addressCountry: 'HU'
-              },
-              servesCuisine: ['Turkish', 'Street Food'],
-              url: 'https://example.com',
-              telephone: '+36 30 222 8755',
-              openingHours: [
-                'Mo-Th 11:00-23:00',
-                'Fr 11:00-24:00',
-                'Sa 11:00-24:00',
-                'Su 11:00-23:00'
-              ]
-            })
-          }}
-        />
-          <Navbar />
-          <PageTransition>{children}</PageTransition>
-          <Footer />
-          <CartButton />
+            <RouteProgress />
+            {/* Restaurant structured data */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'Restaurant',
+                  name: "Ottoman's Döner, Fries & Curry Wurst",
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: 'Péterfia u. 2',
+                    addressLocality: 'Debrecen',
+                    postalCode: '4026',
+                    addressCountry: 'HU'
+                  },
+                  servesCuisine: ['Turkish', 'Street Food'],
+                  url: 'https://example.com',
+                  telephone: '+36 30 222 8755',
+                  openingHours: [
+                    'Mo-Th 11:00-23:00',
+                    'Fr 11:00-24:00',
+                    'Sa 11:00-24:00',
+                    'Su 11:00-23:00'
+                  ]
+                })
+              }}
+            />
+            <Navbar />
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+            <CartButton />
           </CartProvider>
         </LanguageProvider>
       </body>

@@ -39,20 +39,20 @@ export function Navbar() {
           {navItems.map(item => {
             const active = pathname === item.href;
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                className={`relative text-sm uppercase tracking-wider transition-colors group ${active ? 'text-scorchedOrangeLight' : 'hover:text-orange-text'}`}
-              >
-                <span>{t(item.labelKey)}</span>
+              <div key={item.href} className="relative group">
+                <a
+                  href={item.href}
+                  className={`text-sm uppercase tracking-wider transition-colors ${active ? 'text-scorchedOrangeLight' : 'group-hover:text-orange-text'}`}
+                >
+                  {t(item.labelKey)}
+                </a>
                 <motion.span
                   className="absolute -bottom-1 left-0 h-[2px] bg-scorchedOrange pointer-events-none"
                   initial={false}
                   animate={{ width: active ? '100%' : 0 }}
                   transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                 />
-              </Link>
+              </div>
             );
           })}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
