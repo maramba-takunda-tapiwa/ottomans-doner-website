@@ -1,13 +1,14 @@
 ﻿"use client";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import FallingFoodBackground from './FallingFoodBackground';
 
 export function FeaturedItems() {
   const { t, language } = useLanguage();
 
-  const heading = language === 'en' 
+  const heading = language === 'en'
     ? { part1: 'Hungry?', part2: "We've Got You Covered!" }
     : { part1: 'Éhes vagy?', part2: 'Mi megoldást adunk!' };
 
@@ -18,10 +19,6 @@ export function FeaturedItems() {
   const subtitle2 = language === 'en'
     ? "Check out what's cooking!"
     : "Nézd meg mit főzünk!";
-
-  const buttonText = language === 'en'
-    ? "Menu"
-    : "Menü";
 
   return (
     <section className='py-32 relative overflow-hidden'>
@@ -43,37 +40,26 @@ export function FeaturedItems() {
             </p>
           </motion.div>
 
-          {/* Animated Pointing Fingers */}
           <div className='flex flex-col items-center gap-8'>
-            {/* Pointing fingers above button */}
-            <div className='flex items-center justify-center gap-12'>
-              <motion.div
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                animate={{ 
-                  y: [0, 10, 0],
-                  transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut" }
-                }}
-                className='text-4xl pointer-events-none'
-              >
-                👇
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                animate={{ 
-                  y: [0, 10, 0],
-                  transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.3 }
-                }}
-                className='text-4xl pointer-events-none'
-              >
-                👇
-              </motion.div>
-            </div>
+            {/* Animated Arrow */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              animate={{
+                y: [0, 10, 0],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{
+                delay: 0.5,
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity
+              }}
+              className='text-scorchedOrange'
+            >
+              <ArrowDown size={48} strokeWidth={1.5} />
+            </motion.div>
 
             {/* Menu Button */}
             <motion.div
