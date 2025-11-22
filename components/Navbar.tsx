@@ -23,11 +23,11 @@ export function Navbar() {
     <header className="sticky top-0 z-40 backdrop-blur bg-luxuryBlack/80 border-b border-luxuryMaroon/40">
       <div className="luxury-container flex items-center justify-between py-4">
         <Link href="/" className="font-serif text-2xl tracking-wide flex items-center gap-3">
-          <Image 
-            src="/images/Title.jpg" 
-            alt="Ottoman&apos;s Döner Logo" 
-            width={60} 
-            height={60} 
+          <Image
+            src="/images/Title.jpg"
+            alt="Ottoman&apos;s Döner Logo"
+            width={60}
+            height={60}
             className="rounded-lg shadow-lg"
           />
           <div className="flex items-center gap-2">
@@ -47,10 +47,10 @@ export function Navbar() {
               >
                 <span>{t(item.labelKey)}</span>
                 <motion.span
-                  className="absolute -bottom-1 left-0 h-[2px] bg-scorchedOrange"
+                  className="absolute -bottom-1 left-0 h-[2px] bg-scorchedOrange pointer-events-none"
                   initial={false}
                   animate={{ width: active ? '100%' : 0 }}
-                  transition={{ duration: 0.35, ease: [0.25,0.1,0.25,1] }}
+                  transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                 />
               </Link>
             );
