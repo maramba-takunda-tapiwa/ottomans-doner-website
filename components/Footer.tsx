@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="mt-auto border-t border-luxuryMaroon/40 bg-luxuryBlack/95">
       <div className="luxury-container py-10 grid gap-8 md:grid-cols-3 text-sm">
         <div>
-          <h3 className="font-serif text-lg gold-text mb-3 heading-glow">Ottoman's Döner</h3>
+          <h3 className="font-serif text-lg gold-text mb-3 heading-glow">Ottoman&apos;s Döner</h3>
           <p className="text-luxuryGold/70 leading-relaxed">Debrecen's destination for premium Döner, artisanal fries & iconic curry wurst. Dark luxury meets classic Turkish heritage.</p>
         </div>
         <div>
@@ -23,7 +23,7 @@ export function Footer() {
           <p className="mt-3 text-luxuryGold/70">Open late for night cravings.</p>
         </div>
       </div>
-      <div className="text-center py-4 text-xs border-t border-luxuryMaroon/40">© {new Date().getFullYear()} Ottoman's Döner. All rights reserved.</div>
+      <div className="text-center py-4 text-xs border-t border-luxuryMaroon/40">© {new Date().getFullYear()} Ottoman&apos;s Döner. All rights reserved.</div>
     </footer>
   );
 }
