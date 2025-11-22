@@ -25,7 +25,7 @@ export default function CartButton() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-scorched-orange to-gold text-luxury-black p-4 rounded-full shadow-2xl flex items-center gap-2"
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-scorchedOrange to-luxuryGold text-luxuryBlack p-4 rounded-full shadow-2xl flex items-center gap-2"
       >
         <ShoppingCart className="w-6 h-6" />
         {totalItems > 0 && (
@@ -58,10 +58,10 @@ export default function CartButton() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30 }}
-              className="fixed right-0 top-0 h-full w-full md:w-[450px] bg-luxury-black border-l border-scorched-orange/30 z-50 flex flex-col"
+              className="fixed right-0 top-0 h-full w-full md:w-[450px] bg-luxuryBlack border-l border-scorchedOrange/30 z-50 flex flex-col"
             >
               {/* Header */}
-              <div className="p-6 border-b border-scorched-orange/30">
+              <div className="p-6 border-b border-scorchedOrange/30">
                 <div className="flex items-center justify-between">
                   <h2 className="text-2xl font-bold text-gold">
                     {t('cart.title')}
@@ -94,7 +94,7 @@ export default function CartButton() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, x: 100 }}
-                        className="bg-luxury-maroon/30 rounded-lg p-4 border border-scorched-orange/20"
+                        className="bg-luxuryMaroon/30 rounded-lg p-4 border border-scorchedOrange/20"
                       >
                         <div className="flex justify-between items-start mb-3">
                           <div>
@@ -113,7 +113,7 @@ export default function CartButton() {
                         <div className="flex items-center gap-3">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="bg-scorched-orange/20 hover:bg-scorched-orange/30 text-cream w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+                            className="bg-scorchedOrange/20 hover:bg-scorchedOrange/30 text-offWhite w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
                           >
                             <Minus className="w-4 h-4" />
                           </button>
@@ -122,7 +122,7 @@ export default function CartButton() {
                           </span>
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="bg-scorched-orange/20 hover:bg-scorched-orange/30 text-cream w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+                            className="bg-scorchedOrange/20 hover:bg-scorchedOrange/30 text-offWhite w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
                           >
                             <Plus className="w-4 h-4" />
                           </button>
@@ -135,7 +135,7 @@ export default function CartButton() {
 
               {/* Checkout Button */}
               {cart.length > 0 && (
-                <div className="p-6 border-t border-scorched-orange/30">
+                <div className="p-6 border-t border-scorchedOrange/30">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -143,7 +143,7 @@ export default function CartButton() {
                       setIsOpen(false);
                       openCheckoutModal();
                     }}
-                    className="w-full bg-gradient-to-r from-scorched-orange to-gold text-luxury-black font-bold py-4 rounded-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-gold/20 transition-shadow"
+                    className="w-full bg-gradient-to-r from-scorchedOrange to-luxuryGold text-luxuryBlack font-bold py-4 rounded-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-luxuryGold/20 transition-shadow"
                   >
                     {t('cart.checkout')}
                   </motion.button>

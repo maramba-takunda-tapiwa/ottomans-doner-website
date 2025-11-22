@@ -86,7 +86,7 @@ export function FeaturedItems() {
             >
               <Link
                 href="/menu"
-                className='inline-block px-16 py-4 text-2xl font-bold bg-cream/80 text-scorched-orange border-2 border-scorched-orange rounded-lg shadow-lg hover:bg-scorched-orange hover:text-cream transition-all duration-300'
+                className='inline-block px-16 py-4 text-2xl font-bold bg-offWhite/80 text-scorchedOrange border-2 border-scorchedOrange rounded-lg shadow-lg hover:bg-scorchedOrange hover:text-offWhite transition-all duration-300'
               >
                 Menu / Menü
               </Link>

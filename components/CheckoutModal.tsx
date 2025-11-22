@@ -59,7 +59,7 @@ export default function CheckoutModal({ isOpen, onClose, orderItems, onWoltRedir
             transition={{ type: 'spring', damping: 25 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
-            <div className="bg-luxury-black border border-scorched-orange/30 rounded-2xl p-8 max-w-md w-full shadow-2xl">
+            <div className="bg-luxuryBlack border border-scorchedOrange/30 rounded-2xl p-8 max-w-md w-full shadow-2xl">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-serif text-gold">
@@ -74,14 +74,14 @@ export default function CheckoutModal({ isOpen, onClose, orderItems, onWoltRedir
               </div>
 
               {/* Order Summary */}
-              <div className="bg-luxury-maroon/20 rounded-lg p-4 mb-6 border border-luxury-maroon/30">
-                <h3 className="text-gold font-semibold mb-3">{t('checkout.orderSummary')}</h3>
-                <div className="bg-luxury-black/50 rounded-md p-3 border border-scorched-orange/20">
+              <div className="bg-luxuryMaroon/20 rounded-lg p-4 mb-6 border border-luxuryMaroon/30">
+                  <h3 className="text-gold font-semibold mb-3">{t('checkout.orderSummary')}</h3>
+                  <div className="bg-luxuryBlack/50 rounded-md p-3 border border-scorchedOrange/20">
                   <p className="text-cream text-sm font-mono">{orderItems}</p>
                 </div>
-                <button
-                  onClick={copyToClipboard}
-                  className="flex items-center gap-2 mt-3 text-sm text-scorched-orange hover:text-gold transition-colors"
+                  <button
+                    onClick={copyToClipboard}
+                    className="flex items-center gap-2 mt-3 text-sm text-scorchedOrange hover:text-luxuryGold transition-colors"
                 >
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   {copied ? t('checkout.copied') : t('checkout.copyOrder')}
@@ -96,8 +96,8 @@ export default function CheckoutModal({ isOpen, onClose, orderItems, onWoltRedir
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={handleWoltOrder}
-                  className="w-full bg-gradient-to-r from-scorched-orange to-gold text-luxury-black font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-lg"
+                    onClick={handleWoltOrder}
+                    className="w-full bg-gradient-to-r from-scorchedOrange to-luxuryGold text-luxuryBlack font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-lg"
                 >
                   <ExternalLink className="w-5 h-5" />
                   {t('checkout.orderOnWolt')}
@@ -112,7 +112,7 @@ export default function CheckoutModal({ isOpen, onClose, orderItems, onWoltRedir
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={handlePhoneOrder}
-                  className="w-full bg-luxury-maroon/30 border border-luxury-maroon/50 text-cream font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-luxury-maroon/50 transition-colors"
+                  className="w-full bg-luxuryMaroon/30 border border-luxuryMaroon/50 text-offWhite font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-luxuryMaroon/50 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   {t('checkout.callToOrder')}

@@ -16,7 +16,10 @@ const config: Config = {
         accentGlow: '#D9B650',
         scorchedOrange: '#E87224',
         scorchedOrangeLight: '#FF9A4A',
-        offWhite: '#F5F1E6'
+        offWhite: '#F5F1E6',
+        // Aliases for convenience
+        gold: '#C9A227',
+        cream: '#F5F1E6'
       },
       backgroundImage: {
         'hero-texture': "radial-gradient(circle at 30% 30%, rgba(201,162,39,0.15), transparent 60%)"

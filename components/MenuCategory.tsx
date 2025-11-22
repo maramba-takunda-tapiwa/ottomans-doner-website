@@ -40,11 +40,11 @@ export function MenuCategoryComponent({ category }: { category: MenuCategory }) 
                 </div>
                 <p className='text-xs text-luxuryGold/70 leading-relaxed mb-3'>{item.desc}</p>
                 
-                <motion.button
+                  <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => addToCart({ id: item.id, name: item.name, price: item.price })}
-                  className='w-full bg-gradient-to-r from-scorched-orange to-gold text-luxury-black font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-sm shadow-lg hover:shadow-gold/20 transition-shadow'
+                  className='w-full bg-gradient-to-r from-scorchedOrange to-luxuryGold text-luxuryBlack font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-sm shadow-lg hover:shadow-luxuryGold/20 transition-shadow'
                 >
                   <ShoppingCart className='w-4 h-4' />
                   {t('cart.addToCart')}
