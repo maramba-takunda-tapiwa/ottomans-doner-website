@@ -61,7 +61,7 @@ export default function FallingFoodBackground() {
 
       // More realistic rendering
       const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, size);
-      
+
       switch (p.type) {
         case 'fry':
           // Realistic french fry with highlights
@@ -153,10 +153,14 @@ export default function FallingFoodBackground() {
     animate();
 
     const handleResize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+      const newWidth = window.innerWidth;
+      // Only resize if width changes (to avoid reset on mobile address bar toggle)
+      if (newWidth !== width) {
+        width = newWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
     };
 
     window.addEventListener('resize', handleResize);
