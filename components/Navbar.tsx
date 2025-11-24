@@ -35,7 +35,7 @@ export function Navbar() {
             <span className="orange-text">Döner</span>
           </div>
         </Link>
-        <nav className="hidden md:flex gap-6 items-center" aria-label="Primary navigation">
+        <nav className="hidden lg:flex gap-6 items-center" aria-label="Primary navigation">
           {navItems.map(item => {
             const active = pathname === item.href;
             return (
@@ -62,7 +62,7 @@ export function Navbar() {
           </motion.div>
           <LanguageToggle />
         </nav>
-        <button aria-label="Toggle navigation menu" onClick={() => setOpen(prev => !prev)} className="md:hidden text-scorchedOrange focus:outline-none focus:ring-2 focus:ring-scorchedOrange/60 rounded">
+        <button aria-label="Toggle navigation menu" onClick={() => setOpen(prev => !prev)} className="lg:hidden text-scorchedOrange focus:outline-none focus:ring-2 focus:ring-scorchedOrange/60 rounded">
           <span className="font-medium">Menu</span>
         </button>
       </div>
@@ -72,7 +72,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden border-t border-luxuryMaroon/40 bg-luxuryBlack"
+            className="lg:hidden overflow-hidden border-t border-luxuryMaroon/40 bg-luxuryBlack"
           >
             <div className="luxury-container flex flex-col py-4 gap-4">
               {navItems.map(item => {
